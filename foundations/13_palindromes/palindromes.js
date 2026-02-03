@@ -1,6 +1,7 @@
 const palindromes = function palindromes(str) {
+  str = str.replace(/[^\w\']|_/g, "") ;
   let strCopy = str ;
-  let reverseStr = strCopy.split("").reverse().join("") ;
+  let reverseStr = strCopy.split().reverse().join("") ;
   if (str === reverseStr) {return true}
   else {return false}
 };
